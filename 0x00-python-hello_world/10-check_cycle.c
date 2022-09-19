@@ -6,17 +6,19 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *x;
+	listint_t *x, *y;
 
 	if (list == NULL)
 		return (0);
+	y = list;
 	x = list->next;
 
-	while (x != NULL)
+	while (x && y && x->next)
 	{
-		if (x == list)
+		if (x == y)
 			return (1);
-		x = x->next;
+		y = y->next;
+		x = x->next->next;
 	}
 	return (0);
 }
