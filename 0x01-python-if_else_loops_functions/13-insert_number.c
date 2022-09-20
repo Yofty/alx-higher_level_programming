@@ -29,5 +29,5 @@ listint_t *insert_node(listint_t **head, int number)
 		x->next = c->next;
 		c->next = x;
 	}
-	retuen (x);
+	return (x);
 }
