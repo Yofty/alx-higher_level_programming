@@ -43,13 +43,13 @@ class Square:
 
         return self.__size**2
 
-    def mu_print(self):
+    def my_print(self):
         """prints in stdout"""
 
         if self.__size != 0:
             for i in range(slef.__size):
                 for j in range(slef.__size):
-                    print('#', end='')
+                    print('#', end="")
                 print()
         else:
             print()
