@@ -11,7 +11,7 @@ class Square:
             value (int): size of the square.
         """
 
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -46,7 +46,7 @@ class Square:
     def mu_print(self):
         """prints in stdout"""
 
-        if self._size != 0:
+        if self.__size != 0:
             for i in range(slef.__size):
                 for j in range(slef.__size):
                     print('#', end='')
