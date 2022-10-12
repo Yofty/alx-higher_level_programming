@@ -3,7 +3,13 @@
 
 
 def __init__(self, size=0):
-    """initializes the size variable"""
+    """initializes the size variable
+    instance atribute
+
+    Args:
+        __size (int): The __size of new square. 
+
+    """
 
     self.__size = size
     if not isinstance(size, int):
