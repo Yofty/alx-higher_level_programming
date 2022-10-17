@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""defines rectangle"""
+""" area and perimeter of the rectangle"""
 
 
 class Rectangle:
-    """ class rectangle"""
+    """ defines implmentation"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -31,3 +32,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def arera(self):
+        r = self.__height * self.__width
+        return r
+
+    def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        p = (( 2 * self.__height) + (2 * self.__width))
+        return p
