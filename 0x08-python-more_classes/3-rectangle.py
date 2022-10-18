@@ -1,13 +1,11 @@
-#!/usr/bin/python3
-""" area and perimeter of the rectangle"""
+#!/usr/bun.python3
+"""defines rectangle"""
 
 
 class Rectangle:
-    """ defines implmentation"""
-
     def __init__(self, width=0, height=0):
         self.width = width
-        self.height = height
+        selfheight = height
 
     @property
     def width(self):
@@ -22,7 +20,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self):
+    def height(sef):
         return self.__height
 
     @height.setter
@@ -33,10 +31,22 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def arera(self):
-        return (self.__height * self.__width)
+    def area(self):
+        return(self.__height * self.__width)
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return (( 2 * self.__height) + (2 * self.__width))
+        else:
+            return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
