@@ -53,4 +53,3 @@ def matrix_mul(m_a, m_b):
         matrix2.append(my_row)
 
     return matrix2
-
