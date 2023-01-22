@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """A script that: takes in URL, sends a request and displays the value"""
-import sys 
+import sys
 import urllib.request
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
