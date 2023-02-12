@@ -6,9 +6,9 @@ const url = process.argv[2];
 request(url, function (err, response, body) {
   if (err) {
     console.log(err);
-  } else if (response.status.Code === 200) {
+  } else if (response.statusCode === 200) {
     const completed = {};
-    const task = JSON.parse(body);
+    const tasks = JSON.parse(body);
     for (const i in tasks) {
       const task = tasks[i];
       if (task.completed === true) {
