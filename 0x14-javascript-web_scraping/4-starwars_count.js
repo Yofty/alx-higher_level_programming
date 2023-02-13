@@ -14,7 +14,7 @@ request(url, function (err, response, body) {
       for (const charIndex in filmChars) {
         if (filmChars[charIndex].includes('18')) {
           count++;
-	}
+        }
       }
     }
     console.log(count);
