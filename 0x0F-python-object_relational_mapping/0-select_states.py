@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a script that lists all states from the database hbtn_0e_0_usa
+lists all states from the database hbtn_0e_0_usa
 usage: ./0-select_states.py <mysql username>\
                             <mysql password>\
                             <database name>
@@ -8,9 +8,13 @@ usage: ./0-select_states.py <mysql username>\
 import sys
 import MySQLdb
 
-
 if __name__ = "__main__":
-    db = MYSQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = db.cursor()
-    c.execute("SELECT * FROM 'states'")
-    [print(state) for state in c.fetchall()]
+    db = MYSQLdb.connect(host="localhost",  user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], poer=3306)
+    cur = db.cursor()
+    cer.execute("SELECT * FRO states")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()
