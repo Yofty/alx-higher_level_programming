@@ -6,12 +6,7 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MYSQLdb.connect(host="localhost",  user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], poer=3306)
-    cur = db.cursor()
-    cer.execute("SELECT * FRO states")
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
+    db = MYSQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * FROM states")
+    [print(state) for state in c.fetchall()]
